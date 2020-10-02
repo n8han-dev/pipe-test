@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 retry(3) {
-                    sh 'gcc test1.c -o test1'
+                    sh 'ls'
                 }
             }
         }
         stage('Test') {
             steps {
-                sh './test1'
+                sh 'echo "-------------------test 1----------------"'
                 sh 'python hw.py'
             }
         }
