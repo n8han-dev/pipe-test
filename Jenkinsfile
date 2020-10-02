@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 retry(3) {
-                    sh 'ls'
+                    sh "ls"
+                    // sh 'chmod +x test3.sh'
                 }
             }
         }
@@ -13,6 +14,7 @@ pipeline {
             steps {
                 sh 'echo "-------------------test 1----------------"'
                 sh 'python hw.py'
+                sh './test3.sh'
             }
         }
     }
