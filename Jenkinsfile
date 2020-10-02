@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh "ls"
                 retry(3) {
-                    sh "ls"
-                    // sh 'chmod +x test3.sh'
+                    sh 'chmod +x test3.sh'
                 }
             }
         }
